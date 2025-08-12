@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EU TE AMO MUITO MEU AMOR</title>
+
+<style>
+body{
+background-color: blue;
+
+    .painel{
+        margin: auto;
+        background-color: white;
+width: 500px;
+height: 500px;
+border-radius: 20px;
+text-align: center;
+padding-top: 50px;
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+#sim{
+height: 60px;
+width: 120px;
+background-color: blue;
+border: 2px solid white;
+border-radius: 10px;
+color: white;
+margin-right: 150px;
+}
+#nao{
+    position: absolute;
+height: 60px;
+width: 120px;
+background-color: blue;
+border: 2px solid white;
+border-radius: 10px;
+color: white;
+margin-left: -120px;
+}
+</style>
+
+</head>
+<body>
+  
+    
+<div class="painel">
+<h1>teu namorado é lindo?</h1>
+<h2>to aprendendo a programar e esse é meu primeiro site kkkkkk</h2>
+
+
+<a href="https://youtu.be/b0Ya9dPu1mo?si=yOa4js0TEPKIdbm2"><button id="sim" onclick="parabens()"> sim! </button></a>
+
+<button onmouseover="fuja()" id="nao"> não! </button>
+<img src="EU%20TE%20AMO%20MUITO%20MEU%20AMOR_arquivos/gif-1.gif" alt="">
+
+</div>
+
+<script>
+function fuja(){
+    var botaoNao = document.getElementById("nao")
+
+    var larguraJanela = window.innerWidth;
+    var alturaJanela = window.innerHeight;
+
+    var maxX = larguraJanela - botaoNao.offsetWidth;
+    var maxY = alturaJanela - botaoNao.offsetHeight;
+
+    var aleatorioX = Math.floor(Math.random() * maxX);
+    var aleatorioY = Math.floor(Math.random() * maxY);
+
+    botaoNao.style.left = aleatorioX + "px";
+    botaoNao.style.top = aleatorioY + "px";
+    }
+
+    function parabens(){
+        alert("Escolha certa")
+        }
+</script>
+
+
+
+
+
+
+
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+</body></html>
