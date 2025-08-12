@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EU TE AMO MUITO MEU AMOR</title>
+
+<style>
+body{
+background-color: blue;
+
+    .painel{
+        margin: auto;
+        background-color: white;
+width: 500px;
+height: 500px;
+border-radius: 20px;
+text-align: center;
+padding-top: 50px;
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+#sim{
+height: 60px;
+width: 120px;
+background-color: blue;
+border: 2px solid white;
+border-radius: 10px;
+color: white;
+margin-right: 150px;
+}
+#nao{
+    position: absolute;
+height: 60px;
+width: 120px;
+background-color: blue;
+border: 2px solid white;
+border-radius: 10px;
+color: white;
+margin-left: -120px;
+}
+</style>
+
+</head>
+<body>
+  
+    
+<div class="painel">
+<h1>teu namorado é lindo?</h1>
+<h2>to aprendendo a programar e esse é meu primeiro site kkkkkk</h2>
+
+
+<a href="https://youtu.be/b0Ya9dPu1mo?si=yOa4js0TEPKIdbm2"><button id="sim" onclick="parabens()"> sim! </button></a>
+
+<button onmouseover="fuja()" id="nao"> não! </button>
+<img src="https://hands.com.br/pushgif/assets/images/gif-1.gif" alt="">
+
+</div>
+
+<script>
+function fuja(){
+    var botaoNao = document.getElementById("nao")
+
+    var larguraJanela = window.innerWidth;
+    var alturaJanela = window.innerHeight;
+
+    var maxX = larguraJanela - botaoNao.offsetWidth;
+    var maxY = alturaJanela - botaoNao.offsetHeight;
+
+    var aleatorioX = Math.floor(Math.random() * maxX);
+    var aleatorioY = Math.floor(Math.random() * maxY);
+
+    botaoNao.style.left = aleatorioX + "px";
+    botaoNao.style.top = aleatorioY + "px";
+    }
+
+    function parabens(){
+        alert("Escolha certa")
+        }
+</script>
+
+
+
+
+
+
+
+</body>
+</html>
